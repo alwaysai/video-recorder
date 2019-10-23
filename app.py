@@ -13,7 +13,7 @@ def main():
         filename = "capture-{}-{}.avi".format(capture_date, capture_time)
 
         with edgeiq.WebcamVideoStream(cam=0) as video_stream, \
-                edgeiq.VideoWriter(output_path=filename) as video_writer, \
+                edgeiq.VideoWriter(output_path=filename, fps=30) as video_writer, \
                 edgeiq.Streamer() as streamer:
             # Allow Webcam to warm up
             time.sleep(2.0)
