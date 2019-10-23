@@ -1,0 +1,5 @@
+alwaysai.target.json
+models
+venv
+*.avi
+*.mp4
