@@ -2,9 +2,9 @@
 This alwaysAI app records and saves video from a USB webcam or CSI ribbon camera.
 
 ## Setup
-This app requires access to alwaysAI's Beta program. To sign up go to the [Sign up page](https://www.alwaysai.co/dashboard)
+This app requires an alwaysAI account. Head to the [Sign up page](https://www.alwaysai.co/dashboard) if you don't have an account yet. Follow the instructions to install the alwaysAI toolchain on your development machine.
 
-Once accepted to the program, follow the setup instructions located on the [Docs page](https://www.alwaysai.co/docs/getting_started/introduction.html) - Note this link is accessible only to beta users.
+Next, create an empty project to be used with this app. When you clone this repo, you can run `aai app configure` within the repo directory and your new project will appear in the list.
 
 ## Usage
 Once the alwaysAI toolset is installed on your development machine (or edge device if developing directly on it) you can run the following CLI commands:
