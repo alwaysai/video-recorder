@@ -3,7 +3,7 @@ import edgeiq
 import argparse
 
 
-def main(cam, gstreamer):
+def main(cam, record_fps, gstreamer):
 
     fps = edgeiq.FPS()
 
@@ -20,7 +20,7 @@ def main(cam, gstreamer):
             video_stream = edgeiq.WebcamVideoStream(cam=cam).start()
 
         with edgeiq.VideoWriter(
-                        output_path=filename, fps=30) as video_writer, \
+                        output_path=filename, fps=record_fps) as video_writer, \
                 edgeiq.Streamer() as streamer:
             # Allow Webcam to warm up
             time.sleep(2.0)
@@ -56,6 +56,9 @@ if __name__ == "__main__":
             '--camera', type=int, default=0,
             help='Set the camera index. (default: 0)')
     parser.add_argument(
+            '--record-fps', type=int, default=30,
+            help='Set the recording FPS. (default: 30)')
+    parser.add_argument(
             '--gstreamer', action='store_true',
             help='Use GStreamer for ribbon cameras')
 
@@ -66,4 +69,4 @@ if __name__ == "__main__":
     else:
         gstreamer = False
 
-    main(args.camera, gstreamer)
+    main(args.camera, args.record_fps, gstreamer)

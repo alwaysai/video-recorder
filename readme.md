@@ -28,6 +28,8 @@ Video Recorder
 optional arguments:
   -h, --help       show this help message and exit
   --camera CAMERA  Set the camera index. (default: 0)
+  --record-fps RECORD_FPS
+                        Set the recording FPS. (default: 30)
   --gstreamer      Use GStreamer for ribbon cameras
 ```
 
