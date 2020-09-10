@@ -4,13 +4,11 @@ import argparse
 
 
 def main(cam, record_fps, gstreamer):
-
     fps = edgeiq.FPS()
 
     try:
-
-        capture_date = time.strftime('%Y-%m-%d')
-        capture_time = time.strftime('%H:%M:%S')
+        capture_date = time.strftime('%Y.%m.%d')
+        capture_time = time.strftime('%H.%M.%S')
         filename = "capture-{}-{}.avi".format(capture_date, capture_time)
 
         video_stream = None
